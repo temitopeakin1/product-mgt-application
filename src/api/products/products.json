@@ -1,0 +1,62 @@
+[
+  {
+    "productId": 1,
+    "productName": "Video Game Controller",
+    "productCode": "CTL-0011",
+    "releaseDate": "March 19, 2021",
+    "description": "Standard two-button video game controller",
+    "price": 19.95,
+    "starRating": 3.2,
+    "imageUrl": "assets/images/controller.png"
+  },
+  {
+    "productId": 2,
+    "productName": "Dell laptop",
+    "productCode": "DLP-0023",
+    "releaseDate": "March 18, 2021",
+    "description": "dell laptop computer",
+    "price": 32.99,
+    "starRating": 4.2,
+    "imageUrl": "assets/images/dell_laptop.png"
+  },
+  {
+    "productId": 5,
+    "productName": "Hp Laptop",
+    "productCode": "HPL-0048",
+    "releaseDate": "May 21, 2021",
+    "description": "Hewlett Packard Laptop",
+    "price": 8.9,
+    "starRating": 4.8,
+    "imageUrl": "assets/images/hp_laptop.png"
+  },
+  {
+    "productId": 8,
+    "productName": "Play Station",
+    "productCode": "PLS-0022",
+    "releaseDate": "May 15, 2021",
+    "description": "15-inch steel blade hand saw",
+    "price": 11.55,
+    "starRating": 3.7,
+    "imageUrl": "assets/images/playstation.png"
+  },
+  {
+    "productId": 7,
+    "productName": "Video Game Controller",
+    "productCode": "CTL-0011",
+    "releaseDate": "March 19, 2021",
+    "description": "Standard two-button video game controller",
+    "price": 19.95,
+    "starRating": 3.2,
+    "imageUrl": "assets/images/controller.png"
+  },
+  {
+    "productId": 9,
+    "productName": "Video Game Controller",
+    "productCode": "CTL-0011",
+    "releaseDate": "March 19, 2021",
+    "description": "Standard two-button video game controller",
+    "price": 19.95,
+    "starRating": 3.2,
+    "imageUrl": "assets/images/controller.png"
+  }
+]

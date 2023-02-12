@@ -1,0 +1,15 @@
+.card {
+    margin-top: 4rem;
+}
+
+thead {
+    color: #00008b;
+}
+
+.nav-pills li a {
+    color: red;
+}
+
+.card-header{
+    text-align: center;
+}
