@@ -14,17 +14,22 @@ export class ProductListComponent implements OnInit, OnDestroy {
   showImage = false;
   errorMessage = '';
   sub!: Subscription;
+  // categories: ProductCategory[] =[]
 
   private _listFilter = '';
+  
 
   //use accesors, getters and setters
   get listFilter(): string {
     return this._listFilter;
   }
+
   set listFilter(value: string) {
     this._listFilter = value;
     this.filteredProducts = this.performFilter(value);
   }
+
+
 
   filteredProducts: IProduct[] = [];
   products: IProduct[] = [];

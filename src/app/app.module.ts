@@ -7,6 +7,7 @@ import { WelcomeComponent } from './home/welcome.component';
 import { RouterModule } from '@angular/router';
 import { ContactComponent } from './contact/contact.component';
 import { ProductModule } from './products/product.module';
+import { SupplierDataComponent } from './suppliers/supplier-data/supplier-data.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { ProductModule } from './products/product.module';
     AppComponent,
     WelcomeComponent,
     ContactComponent,
+    SupplierDataComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,8 @@
-import { HttpClient, HttpErrorResponse } from "@angular/common/http";
-import { Injectable } from "@angular/core";
-import { Observable, catchError, tap, throwError, map } from "rxjs";
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable, catchError, tap, throwError, map } from 'rxjs';
 
-import { IProduct } from "./product";
+import { IProduct } from './product';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ export class ProductService {
   // If using Stackblitz, replace the url with this line
   // because Stackblitz can't find the api folder.
   // private productUrl = 'assets/products/products.json';
-  private productUrl = 'api/products/products.json';
+  private productUrl = 'assets/api/products/products.json';
 
   constructor(private http: HttpClient) { }
 
@@ -20,6 +20,10 @@ export class ProductService {
       .pipe(
         tap(data => console.log('All: ', JSON.stringify(data))),
         catchError(this.handleError)
+        // catchError(err => {
+        //   console.log(err);
+        //   return throwError(() => new Error('Could not Retrieve'));
+        // })
       );
   }
 
