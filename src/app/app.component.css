@@ -1,6 +1,7 @@
 
 navbar .navbar-brand a{
     color: red;
+    background-color: green;
 }
 
 nav {
@@ -8,5 +9,7 @@ nav {
     background-color: #0000;
 }
 
-
-
+.navbar > li:last-child
+{
+    float:right;
+}
