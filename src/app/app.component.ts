@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   template: `
     <nav class="navbar navbar-expand navbar-light bg-light">
       <!-- <a class="navbar-brand">{{ pageTitle }}</a> -->
-      <img src="assets/images/plogo.png" width="300"> 
+      <img src="assets/images/plogo.png" width="150"> 
       <ul class="nav">
         <li><a class="nav-link" routerLink="/welcome">Home</a></li>
         <li></li>

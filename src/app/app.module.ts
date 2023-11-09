@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
 import { ContactComponent } from './contact/contact.component';
 import { ProductModule } from './products/product.module';
 import { SupplierDataComponent } from './suppliers/supplier-data/supplier-data.component';
-
+import { ProductDetailComponent } from './products/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +26,10 @@ import { SupplierDataComponent } from './suppliers/supplier-data/supplier-data.c
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' },
       { path: 'contact-us', redirectTo: 'contact' },
-     
     ]),
-    ProductModule
+    ProductModule,
   ],
   // providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

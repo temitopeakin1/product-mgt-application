@@ -13,3 +13,6 @@ thead {
 .card-header{
     text-align: center;
 }
+.socials a {
+    padding: 10px;
+}

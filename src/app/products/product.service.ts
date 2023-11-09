@@ -24,7 +24,7 @@ export class ProductService {
         //   console.log(err);
         //   return throwError(() => new Error('Could not Retrieve'));
         // })
-      );
+      ); 
   }
 
   // Get one product
@@ -40,7 +40,7 @@ export class ProductService {
   private handleError(err: HttpErrorResponse): Observable<never> {
     // in a real world app, we may send the server to some remote logging infrastructure
     // instead of just logging it to the console
-    let errorMessage = '';
+    let errorMessage = 'Not available';
     if (err.error instanceof ErrorEvent) {
       // A client-side or network error occurred. Handle it accordingly.
       errorMessage = `An error occurred: ${err.error.message}`;
@@ -52,5 +52,4 @@ export class ProductService {
     console.error(errorMessage);
     return throwError(() => errorMessage);
   }
-
 }

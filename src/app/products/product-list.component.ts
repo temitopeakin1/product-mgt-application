@@ -46,7 +46,6 @@ export class ProductListComponent implements OnInit, OnDestroy {
   toggleImage(): void {
     this.showImage = !this.showImage;
   }
-
   // subscribe here
   ngOnInit(): void {
     this.sub = this.productService.getProducts().subscribe({
