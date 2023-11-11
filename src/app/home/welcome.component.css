@@ -1,3 +1,11 @@
-.link .socials {
-    padding: 10px;
+.socials {
+    font-size: 30px
 }
+
+.socials a {
+    margin-right: 10px; /* Adjust the value according to your spacing preference */
+  }
+  
+  .socials a:last-child {
+    margin-right: 0; /* Removes margin from the last child to prevent extra spacing */
+  }
