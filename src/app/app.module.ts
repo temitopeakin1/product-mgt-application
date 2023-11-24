@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ProductModule } from './products/product.module';
 import { SupplierDataComponent } from './suppliers/supplier-data/supplier-data.component';
 import { ProductDetailComponent } from './products/product-detail.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ProductDetailComponent } from './products/product-detail.component';
     WelcomeComponent,
     ContactComponent,
     SupplierDataComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +28,7 @@ import { ProductDetailComponent } from './products/product-detail.component';
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' },
       { path: 'contact-us', redirectTo: 'contact' },
+      { path: 'login', redirectTo: 'login'},
     ]),
     ProductModule,
   ],
