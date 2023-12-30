@@ -30,6 +30,8 @@ import { LoginComponent } from './login/login.component';
     RouterModule.forRoot([
       { path: 'welcome', component: WelcomeComponent },
       { path: 'contact', component: ContactComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'signup', component: SignupComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' },
       { path: 'contact-us', redirectTo: 'contact' },

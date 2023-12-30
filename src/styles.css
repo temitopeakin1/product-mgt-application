@@ -78,4 +78,20 @@ h1 {
  }
 }
 
+.navbar {
+  height: 5.6rem;
+  padding-left: 80px
+}
+
+.navbar .navbar-nav .nav-link {
+  padding-right: 80px;
+  color: #000;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: #ff0000;
+}
+
 
