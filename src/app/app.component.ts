@@ -15,8 +15,8 @@ import { Component } from '@angular/core';
           <li><a class="nav-link" routerLink="/welcome">Home</a></li>
           <li><a class="nav-link" routerLink="/products">Product List</a></li>
           <li><a class="nav-link" routerLink="/contact">Contact</a></li>
-          <li><a class="nav-link" routerLink="/login">Login</a></li>
-          <li><a class="nav-link" routerLink="/signup">Sign Up</a></li>
+          <li><a class="nav-link" routerLink="/register">Register</a></li>
+          <!-- <li><a class="nav-link" routerLink="/signup">Sign Up</a></li> -->
         </ul>
       </div>
     </nav>

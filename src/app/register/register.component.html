@@ -1,0 +1,108 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="header">
+          <h1>Create an account</h1>
+          <h2>Welcome, Kindly enter your details</h2>
+        </div>
+
+        <div class="card-body">
+          <form [formGroup]="registerForm" novalidate
+          (keydown.enter)="$event.preventDefault()"
+          (ngSubmit)="onSubmit()">
+            <div class="container-fluid">
+              <div class="username">
+                <div class="form-group row mb-4 justify center">
+                  <label class="col-md-6" for="usernameId">
+                    Username
+                  </label>
+                  <input
+                    type="text"
+                    formControlName="userName"
+                    class="form-control"
+                    placeholder="Username (required)"
+                    [ngClass]="{
+                      'is-invalid':
+                        (registerForm.get('userName')?.touched ||
+                          registerForm.get('userName')?.dirty) &&
+                        !registerForm.get('userName')?.valid
+                    }"
+                  />
+                  <span class="invalid-feedback">
+                    <span *ngIf="registerForm.get('userName')?.errors?.['required']">
+                      Kindly fill the required
+                  </span>
+                  <span *ngIf="registerForm.get('userName')?.errors?.['minlength']">
+                    The username must be longer than 3 characters.
+                  </span>
+                  </span>
+                </div>
+              </div>
+              <div formGroupName="emailGroup">
+                <div class="form-group row mb-4">
+                  <label class="col-md-6 " for="emailId">
+                    Email
+                  </label>
+                  <input
+                    type="text"
+                    formControlName="email"
+                    class="form-control"
+                    placeholder="email (required)"
+                    [ngClass]="{
+                      'is-invalid': 
+                      (registerForm.get('email')?.touched ||
+                    registerForm.get('email')?.dirty) &&
+                    !registerForm.get('email')?.valid
+                    }"
+                  />
+                </div>
+              </div>
+              <div class="password">
+                <div class="form-group row mb-4 justify center">
+                  <label class="col-md-6 " for="password">
+                    Password
+                  </label>
+                  <input
+                    type="text"
+                    formControlName="password"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="repeat-password">
+                <div class="form-group row mb-4 justify center">
+                  <label class="col-md-6" for="repeat-password">
+                    Repeat Password
+                  </label>
+                  <input
+                    type="text"
+                    formControlName="repeat-password"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group row mb-4">
+              <div class="offset-md-2 col-md-4">
+                <button
+                  class="btn btn-primary"
+                  type="submit"
+                  style="width: 100px;"
+                  [title]="
+                    registerForm.valid
+                      ? 'Save your entered data'
+                      : 'Disabled until the form data is valid'
+                  "
+                  [disabled]="!registerForm.valid"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

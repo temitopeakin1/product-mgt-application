@@ -10,7 +10,7 @@ import { ProductModule } from './products/product.module';
 import { SupplierDataComponent } from './suppliers/supplier-data/supplier-data.component';
 import { ProductDetailComponent } from './products/product-detail.component';
 import { SignupComponent } from './signup/signup.component';
-import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -20,7 +20,7 @@ import { LoginComponent } from './login/login.component';
     ContactComponent,
     SupplierDataComponent,
     SignupComponent,
-    LoginComponent,
+    RegisterComponent,
 
   ],
   imports: [
@@ -30,7 +30,7 @@ import { LoginComponent } from './login/login.component';
     RouterModule.forRoot([
       { path: 'welcome', component: WelcomeComponent },
       { path: 'contact', component: ContactComponent },
-      { path: 'login', component: LoginComponent },
+      { path: 'register', component: RegisterComponent },
       { path: 'signup', component: SignupComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' },
