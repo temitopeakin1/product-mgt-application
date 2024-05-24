@@ -7,10 +7,12 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./register.component.css'],
 })
 
+
 export class RegisterComponent implements OnInit {
   submitted!: boolean;
   registerForm!: FormGroup; // ppty for the rootform group is the registerForm
-  // register = new Register();
+  //register= new Register();
+  emailMessage= '';
   
 
   constructor(private formBuilder: FormBuilder) {}

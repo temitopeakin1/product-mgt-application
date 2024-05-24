@@ -50,12 +50,10 @@
                     class="form-control"
                     placeholder="email (required)"
                     [ngClass]="{
-                      'is-invalid': 
-                      (registerForm.get('email')?.touched ||
-                    registerForm.get('email')?.dirty) &&
-                    !registerForm.get('email')?.valid
-                    }"
-                  />
+                      'is-invalid': emailMessage}" />
+                      <span class = invalid-feedback>
+                        {{emailMessage}}
+                      </span>
                 </div>
               </div>
               <div class="password">
@@ -88,7 +86,6 @@
                 <button
                   class="btn btn-primary"
                   type="submit"
-                  style="width: 100px;"
                   [title]="
                     registerForm.valid
                       ? 'Save your entered data'
