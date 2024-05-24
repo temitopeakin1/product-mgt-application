@@ -6,18 +6,15 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
 })
-
-
 export class RegisterComponent implements OnInit {
   submitted!: boolean;
   registerForm!: FormGroup; // ppty for the rootform group is the registerForm
   //register= new Register();
-  emailMessage= '';
-  
+  emailMessage = '';
 
   constructor(private formBuilder: FormBuilder) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
       userName: ['', [Validators.required, Validators.minLength(4)]],
       email: ['', [Validators.required, Validators.email]],
@@ -25,7 +22,8 @@ export class RegisterComponent implements OnInit {
       repeatPassword: ['', [Validators.required]],
     });
   }
-  onSubmit() {
+  onSubmit(): void {
     this.submitted = true;
+    console.log('Form Submitted', this.registerForm.value);
   }
 }

@@ -12,11 +12,10 @@ import { Component } from '@angular/core';
           </a>
         </div>
         <ul class="nav navbar-nav ml-auto">
-          <li><a class="nav-link" routerLink="/welcome">Home</a></li>
-          <li><a class="nav-link" routerLink="/products">Product List</a></li>
+          <li><a class="nav-link" routerLink="/home">Home</a></li>
+          <li><a class="nav-link" routerLink="/products">Products</a></li>
           <li><a class="nav-link" routerLink="/contact">Contact</a></li>
           <li><a class="nav-link" routerLink="/register">Register</a></li>
-          <!-- <li><a class="nav-link" routerLink="/signup">Sign Up</a></li> -->
         </ul>
       </div>
     </nav>

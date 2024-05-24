@@ -4,10 +4,10 @@ import { Component } from '@angular/core';
 
 @Component({
   // imports: [FontAwesomeModule],
-  templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.css']
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
  
 })
-export class WelcomeComponent {
+export class HomeComponent {
    public pageTitle ='Product Management Application';
 }
