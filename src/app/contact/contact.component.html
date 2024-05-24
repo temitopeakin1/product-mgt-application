@@ -1,1 +1,43 @@
-<p>contact works!</p>
+<div class="contact-container">
+  <div class="row justify-content-center">
+    <h1>For inquiries, complete the form</h1>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          id="name"
+          formControlName="name"
+          class="form-control"
+          placeholder="Your Name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          formControlName="email"
+          class="form-control"
+          placeholder="Your Email"
+        />
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          formControlName="message"
+          class="form-control"
+          placeholder="Your Message"
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [disabled]="!contactForm.valid"
+      >
+        Send
+      </button>
+    </form>
+  </div>
+</div>

@@ -1,32 +1,86 @@
 .container {
-    height: 100vh;
-    max-width: 100%;
-}
+    max-width: 500px;
+    height: 80vh;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
 
-h1{
-    font-size: 18px;
-    font-weight: 500;
-}
-
-h2 {
-    font-size: 12px;
+  .container .header {
     text-align: center;
-}
+  }
 
-label{
-    font-size: 14px
-}
+  .container .header h1 {
+    font-size: 16px;
+  }
 
-.btn-primary {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
+  .container .header h2 {
+    font-size: 14px;
+  }
+  .container .form-group {
+    margin-bottom: 15px;
+  }
+  .container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  .container .form-group .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .container .form-group textarea.form-control {
+    height: 150px;
+    resize: vertical;
+  }
+  .container .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
     border: none;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    border-radius: 4px;
+    color: #fff;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 4px;
-
-}
+    transition: background-color 0.3s;
+  }
+  .container .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  .container .btn-primary:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+    .btn-primary {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 480px) {
+    .container {
+      padding: 10px;
+    }
+    h1 {
+      font-size: 24px;
+    }
+    .form-group .form-control {
+      padding: 8px;
+    }
+    .form-group textarea.form-control {
+      height: 120px;
+    }
+    .btn-primary {
+      font-size: 12px;
+    }
+  }
+  

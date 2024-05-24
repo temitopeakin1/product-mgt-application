@@ -35,7 +35,7 @@ import { RegisterComponent } from './register/register.component';
       { path: 'register', component: RegisterComponent },
       { path: 'signup', component: SignupComponent },
       { path: '', redirectTo: 'home', pathMatch: 'full' },
-      { path: '**', redirectTo: 'welcome', pathMatch: 'full' },
+      { path: '**', redirectTo: 'home', pathMatch: 'full' },
       { path: 'contact-us', redirectTo: 'contact' },
       { path: 'customer', redirectTo: 'customer' },
     ]),

@@ -9,21 +9,22 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class RegisterComponent implements OnInit {
   submitted!: boolean;
   registerForm!: FormGroup; // ppty for the rootform group is the registerForm
-  //register= new Register();
   emailMessage = '';
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
-    this.registerForm = this.formBuilder.group({
+    this.registerForm = this.fb.group({
       userName: ['', [Validators.required, Validators.minLength(4)]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
-      repeatPassword: ['', [Validators.required]],
+      repeatPassword: ['', [Validators.required, Validators.minLength(6)]],
     });
   }
   onSubmit(): void {
     this.submitted = true;
-    console.log('Form Submitted', this.registerForm.value);
+    if (this.registerForm.valid) {
+      console.log('Form Submitted', this.registerForm.value);
+    }
   }
 }
