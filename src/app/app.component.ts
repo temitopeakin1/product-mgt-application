@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 // components metadata (@component is a decorator)
 @Component({
-  selector: 'app-root',
-  template: `
+    selector: 'app-root',
+    template: `
     <nav class="navbar navbar-expand navbar-light bg-light">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -23,5 +23,6 @@ import { Component } from '@angular/core';
       <router-outlet></router-outlet>
     </div>
   `,
+    standalone: false
 })
 export class AppComponent {}
