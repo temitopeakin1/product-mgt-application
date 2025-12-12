@@ -10,7 +10,7 @@
       novalidate
       (keydown.enter)="$event.preventDefault()"
       (ngSubmit)="onSubmit()"
-    >
+      >
       <div class="form-group">
         <label for="username">
           Username
@@ -27,14 +27,18 @@
                 registerForm.get('userName')?.dirty) &&
               !registerForm.get('userName')?.valid
           }"
-        />
+          />
         <span class="invalid-feedback">
-          <span *ngIf="registerForm.get('userName')?.errors?.['required']">
-            Kindly fill the required
-          </span>
-          <span *ngIf="registerForm.get('userName')?.errors?.['minlength']">
-            The username must be longer than 3 characters.
-          </span>
+          @if (registerForm.get('userName')?.errors?.['required']) {
+            <span>
+              Kindly fill the required
+            </span>
+          }
+          @if (registerForm.get('userName')?.errors?.['minlength']) {
+            <span>
+              The username must be longer than 3 characters.
+            </span>
+          }
         </span>
       </div>
       <div class="form-group">
@@ -50,7 +54,7 @@
           [ngClass]="{
             'is-invalid': emailMessage
           }"
-        />
+          />
         <span class="invalid-feedback">
           {{ emailMessage }}
         </span>
@@ -64,7 +68,7 @@
           id="password"
           formControlName="password"
           class="form-control"
-        />
+          />
       </div>
       <div class="form-group">
         <label for="repeatPassword">
@@ -75,13 +79,13 @@
           id="repeatPassword"
           formControlName="repeatPassword"
           class="form-control"
-        />
+          />
       </div>
       <button
         type="submit"
         class="btn btn-primary"
         [disabled]="!registerForm.valid"
-      >
+        >
         Submit
       </button>
     </form>

@@ -6,41 +6,44 @@
         <input type="text" [(ngModel)]="listFilter" />
       </div>
       <!-- <div class="col-sm-2">
-        <input type="text" [(ngModel)]="listCode" />
-      </div> -->
-    </div>
-    <!-- <div class='row'
-         *ngIf='listFilter'>
-      <div class='col-md-6'>
-        <h4>Filtered by: {{listFilter}}</h4>
-      </div>
+      <input type="text" [(ngModel)]="listCode" />
     </div> -->
-    <div class="table-responsive">
-      <table class="table" *ngIf="products.length">
-        <thead>
+  </div>
+  <!-- <div class='row'
+  *ngIf='listFilter'>
+  <div class='col-md-6'>
+    <h4>Filtered by: {{listFilter}}</h4>
+  </div>
+</div> -->
+<div class="table-responsive">
+  @if (products.length) {
+    <table class="table">
+      <thead>
+        <tr>
+          <th>
+            <button class="btn btn-primary btn-sm" (click)="toggleImage()">
+              {{ showImage ? "Hide" : "Show" }} Image
+            </button>
+          </th>
+          <th>Brand</th>
+          <th>Code</th>
+          <th>Available</th>
+          <th>Price</th>
+          <th>5 Star Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (product of filteredProducts; track product) {
           <tr>
-            <th>
-              <button class="btn btn-primary btn-sm" (click)="toggleImage()">
-                {{ showImage ? "Hide" : "Show" }} Image
-              </button>
-            </th>
-            <th>Brand</th>
-            <th>Code</th>
-            <th>Available</th>
-            <th>Price</th>
-            <th>5 Star Rating</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let product of filteredProducts">
             <td>
-              <img
-                *ngIf="showImage"
-                [src]="product.imageUrl"
-                [title]="product.productName"
-                [style.width.px]="imageWidth"
-                [style.margin.px]="imageMargin"
-              />
+              @if (showImage) {
+                <img
+                  [src]="product.imageUrl"
+                  [title]="product.productName"
+                  [style.width.px]="imageWidth"
+                  [style.margin.px]="imageMargin"
+                  />
+              }
             </td>
             <td>
               <a [routerLink]="['/products', product.productId]">
@@ -55,15 +58,19 @@
               <app-star
                 [rating]="product.starRating"
                 (ratingClicked)="onRatingClicked($event)"
-              >
+                >
               </app-star>
             </td>
           </tr>
-        </tbody>
-      </table>
-    </div>
+        }
+      </tbody>
+    </table>
+  }
+</div>
+</div>
+</div>
+@if (errorMessage) {
+  <div class="alert alert-danger">
+    Error: {{ errorMessage }}
   </div>
-</div>
-<div *ngIf="errorMessage" class="alert alert-danger">
-  Error: {{ errorMessage }}
-</div>
+}
